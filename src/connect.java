@@ -2,7 +2,7 @@ import java.sql.*;
 public class connect {
     private static final String Database="jdbc:mysql://localhost:3306/Bus_reservation";
     private static final String userName ="root";
-    private static final String passwd="";
+    private static final String password="";
     Statement  sql;
     Connection con;
     connect()
@@ -11,7 +11,7 @@ public class connect {
         {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Trying to connect");  
-             con=DriverManager.getConnection(Database,userName,passwd);
+             con=DriverManager.getConnection(Database,userName,password);
             System.out.println("Connected");  
             sql=con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);  
         }
